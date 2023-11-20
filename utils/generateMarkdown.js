@@ -60,39 +60,39 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
-  Installation
+  [Installation](#installation)
 
-  Usage
+  [Usage](#usage)
 
-  License
+  [License](#license)
 
-  Contributing
+  [Contributing](#contributing)
 
-  Tests
+  [Tests](#tests)
 
-  Questions
+  [Questions](#questions)
 
-  ## Installation
+  ## Installation <a id="installation"></a>
 
   ${data.installation}
 
-  ## Usage
+  ## Usage <a id="usage"></a>
 
   ${data.usage}
 
-  ## License 
+  ## License <a id="license"></a>
 
   ${licenseSection}
 
-  ## Contributing 
+  ## Contributing <a id="contributing"></a>
 
   ${data.contributing}
 
-  ## Tests
+  ## Tests <a id="tests"></a>
 
   ${data.tests}
 
-  ## Questions
+  ## Questions <a id="questions"></a>
 
   GitHub: ${data.githubUsername}
 
