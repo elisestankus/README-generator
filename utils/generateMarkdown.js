@@ -20,7 +20,21 @@ function renderLicenseBadge(data) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(data) {
+  if (data.license == 'Apache 2.0') {
+    licenseLink = `https://opensource.org/licenses/Apache-2.0`
+  } else if (data.license == 'MIT'){
+    licenseLink = `https://opensource.org/licenses/MIT`
+  } else if (data.license == 'GPLv2') {
+    licenseLink = `https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html`
+  } else if (data.license == 'GPLv3') {
+    licenseLink = `https://www.gnu.org/licenses/gpl-3.0`
+  } else if (data.license == 'BSD 3-clause') {
+    licenseLink = `https://opensource.org/licenses/BSD-3-Clause`
+  } else {
+    licenseLink = ''
+}
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -28,8 +42,9 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  renderLicenseLink(data)
   renderLicenseBadge(data)
-  return `# ${data.title}   ${badge}
+  return `# ${data.title}      <a href = "${licenseLink}">${badge}</a>
 
   ## Description
 
