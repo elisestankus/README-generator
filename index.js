@@ -63,7 +63,10 @@ function init() {
         .then((data) => {
             const markdownPageContent = generateMarkdown(data);
 
-            
+            fs.writeFile('README.md', markdownPageContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created README.md!')
+            );
+
         })
 }
 
